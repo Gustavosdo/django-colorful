@@ -8,7 +8,7 @@ from . import forms, widgets
 
 class RGBColorField(CharField):
     """Field for database models"""
-    widget = widgets.ColorFieldWidget
+    widget = widgets.SpectrumColorPicker
     default_validators = [RegexValidator(regex=forms.RGB_REGEX)]
 
     def __init__(self, *args, **kwargs):
